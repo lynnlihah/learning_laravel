@@ -3,10 +3,8 @@
 https://laravel.com/docs/5.4 官方文档，以此为准
 
 教程地址：
-http://www.golaravel.com/post/laravel-5-getting-started-part-1/
-
-######本教程示例代码见：https://github.com/johnlui/Learn-Laravel-5
-
+Ruby 程序员学习 Laravel 框架笔记
+https://laravel-china.org/articles/5539/ruby-programmers-learn-laravel-framework-notes-1-php-development-environment-installation
 
 Laravel 5 中文文档：
 http://laravel-china.org/docs/5.0
