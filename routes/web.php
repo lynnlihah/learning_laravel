@@ -15,4 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/users/create', 'UsersController@create');
+
 Route::get('/users', 'UsersController@index');
+
+// Route::get('/users', function(){
+// 	$users = [
+// 		'0' => [
+// 			'first_name' => 'Renato',
+// 			'last_name' => 'Hysa'
+// 		],	
+// 		'1' => [
+// 			'first_name' => 'Jessica',
+// 			'lase_name' => 'Alba'
+// 		]
+// 	];
+// 	return $users;
+// });
