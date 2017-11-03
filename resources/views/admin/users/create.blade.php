@@ -8,4 +8,7 @@
     password:
     <input type="password" name="password">
     <input type="submit" vaule="Create">
+    <!-- 在提交表单中添加如下代码，即可在请求中带上token -->
+    <!-- <input type='hidden' name='_token' value="="<?php echo csrf_token()?>">  -->
 </form>
+

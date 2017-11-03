@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users/create', 'UsersController@create');
+Route::post('/users', 'UsersController@store');
 
 Route::get('/users', 'UsersController@index');
 
@@ -32,3 +33,18 @@ Route::get('/users', 'UsersController@index');
 // 	];
 // 	return $users;
 // });
+
+Route::get('testCsrf',function(){
+    $csrf_field = csrf_field();
+    $html = <<<GET
+        <form method="POST" action="/testCsrf">
+             {$csrf_field} <!--去掉此行报错TokenMismatchException--!>
+            <input type="submit" value="Test"/>
+        </form>
+GET;
+    return $html;
+});
+
+Route::post('testCsrf',function(){
+    return 'Success!';
+});
