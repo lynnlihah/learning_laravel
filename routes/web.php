@@ -38,7 +38,8 @@ Route::get('testCsrf',function(){
     $csrf_field = csrf_field();
     $html = <<<GET
         <form method="POST" action="/testCsrf">
-             {$csrf_field} <!--去掉此行报错TokenMismatchException--!>
+             <!-- {$csrf_field} 
+             去掉此行报错TokenMismatchException, 但在Middleware的VerifyCsrfTokenc处理后，去掉也不会报错--!> 
             <input type="submit" value="Test"/>
         </form>
 GET;
@@ -48,3 +49,7 @@ GET;
 Route::post('testCsrf',function(){
     return 'Success!';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
