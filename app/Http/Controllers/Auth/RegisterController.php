@@ -64,6 +64,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            // 'name' => ucfirst($data['name']), // 创建用户时转换为大写
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
