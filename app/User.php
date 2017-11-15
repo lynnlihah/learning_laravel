@@ -34,4 +34,9 @@ class User extends Authenticatable
     {
         $this->attributes['name'] = ucfirst($value);
     }
+    // 未生效，why?
+    public function getNameArrtibute($value)
+    {
+        return strtoupper($value);
+    }
 }
