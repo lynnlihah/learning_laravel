@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use View;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // 在所有视图中共享变量，$view引用
+        View::share('myname', 'Renato');
     }
 
     /**

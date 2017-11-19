@@ -19,4 +19,9 @@ class PagesController extends Controller
 	    else
 	    	return 'No view available';
 	}
+
+	public function blade()
+	{
+		return view('pages.bladetest');
+	}
 }
