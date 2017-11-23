@@ -17,7 +17,7 @@
 
 
 Route::get('/','PagesController@index');
-Route::get('blade','PagesController@blade');
+Route::get('/blade','PagesController@blade');
 
 Route::get('/users/create', 'UsersController@create');
 Route::post('/users', 'UsersController@store');
