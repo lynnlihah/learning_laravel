@@ -22,7 +22,15 @@ Route::get('/blade','PagesController@blade');
 Route::get('/users/create', 'UsersController@create');
 Route::post('/users', 'UsersController@store');
 
-Route::get('/users', 'UsersController@index');
+// Route::get('/users', 'UsersController@index')->middleware('authenticated');
+// Route group 
+Route::group(['middleware' => ['authenticated']], function() {
+    Route::get('users', 'UsersController@index');
+    Route::get('profile', 'PagesController@profile');
+    Route::get('settings', 'PagesController@settings');
+});
+
+Route::get('/profile/{username}', 'ProfileController@profile');
 
 // Route::get('/users', function(){
 // 	$users = [
